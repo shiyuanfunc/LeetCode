@@ -9,6 +9,9 @@ public class Jdk8Stream {
 		ArrayList<String> list = new ArrayList<>();
 		list.add("1");
 		list.add("2");
+		list.add("a");
 		list.stream().filter(x -> x.equals("2")).forEach(System.out::println);
+		
+		list.stream().map(String::toUpperCase).forEach(System.out::println);
 	}
 }
