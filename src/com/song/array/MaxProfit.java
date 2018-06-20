@@ -6,8 +6,29 @@ package com.song.array;
 
 	注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）
  * @author Administrator
+ *	解题思路： 找局部递增序列 相加 就是结果	
  *
  */
 public class MaxProfit {
-
+	
+	public static void main(String[] args) {
+		int[] a = new int[] {1,2,7,3,9};
+		int result = 0 ;
+		if (a.length <= 1) return ;
+		
+		for (int i = 0 ; i < a.length ;) {
+			int j = i; 
+			while (j+1 < a.length &&( a[j+1] > a[j])) {
+				j++;
+			}
+			if (j == i) {
+				i ++ ;
+			}else {
+				result = result + a[j] - a[i];
+				i= j+1;
+			}
+		}
+		
+		System.out.println(result);
+	}
 }
