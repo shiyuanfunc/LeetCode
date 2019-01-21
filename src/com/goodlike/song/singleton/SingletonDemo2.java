@@ -11,7 +11,7 @@ public class SingletonDemo2 {
 
     }
 
-    public static class SingletonHoider{
+    private static class SingletonHoider{
         private static SingletonDemo2 instance = new SingletonDemo2();
     }
 
