@@ -14,6 +14,5 @@ public enum SingletonDemo3 {
     }
 
     public void test(){
-
     }
 }
