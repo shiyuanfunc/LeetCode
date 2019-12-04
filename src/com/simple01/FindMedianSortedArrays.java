@@ -1,10 +1,11 @@
-package com.goodlike.song.simple01;
+package com.simple01;
 
 /**
  * @author Song Yinghui
  * @date 2019/12/3
  * @Version 1.0
  * 寻找两个有序数组的中位数
+ * 先合并两个有序数组，然后再计算
  */
 public class FindMedianSortedArrays {
 

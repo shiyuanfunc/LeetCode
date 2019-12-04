@@ -1,4 +1,4 @@
-package com.goodlike.song.simple01;
+package com.simple01;
 
 import java.util.HashMap;
 import java.util.Map;

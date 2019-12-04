@@ -1,4 +1,4 @@
-package com.goodlike.song.simple01;
+package com.goodlike.song;
 
 /**
  * @author Song Yinghui
@@ -58,7 +58,7 @@ public class AddTwoNumber {
         return result;
     }
 
-    public static class ListNode {
+    static class ListNode {
         int val;
         ListNode next;
 
