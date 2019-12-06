@@ -1,10 +1,7 @@
 package com.goodlike.song;
 
 import java.math.BigDecimal;
-import java.util.ArrayDeque;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Deque;
+import java.util.*;
 
 /**
  * @author Song Yinghui
@@ -43,5 +40,48 @@ public class Test {
          */
         System.out.println(new BigDecimal(3).equals(new BigDecimal("3.0")));
         System.out.println(new BigDecimal(3).compareTo(new BigDecimal("3.0")));
+
+        byte[] decode = Base64.getDecoder().decode("aHVjaGFuLnpqeEBhbGliYWJhLWluYy5jb20=");
+
+        System.out.println(new String(decode));
+
+        List<String> list = new ArrayList<>();
+
+        list.addAll(Arrays.asList("abc","efg","测试一下","2","2","3","4"));
+
+        //会报错
+//        for (String str : list){
+//            if ("2".equals(str)){
+//                list.remove(str);
+//            }
+//        }
+
+        //list remove之后 会即时生效,list.size()会变减一，而a仍然会加1，因此会造成改元素的下一个元素被忽略
+//        for (int a = 0 ; a < list.size(); a++){
+//            if ("2".equals(list.get(a))){
+//                list.remove(a);
+//            }
+//        }
+
+        //Iterator 内部维护了一个游标cursor保存当前调用的数据位置下标，调用next()方法时，会使cursor加1，
+        // 调用Iterator.remove()方法时，不会增加cursor的值，因此即时删除list元素，list.size()减一，因为cursor并未增加，因此可以正常删除。
+        Iterator<String> iterator = list.iterator();
+//        while (iterator.hasNext()){
+//            String next = iterator.next();
+//            if ("2".equals(next)){
+//                iterator.remove();
+//            }
+//        }
+
+        //仿照Iterator 实现
+        int b = 0;
+        while (b < list.size()){
+            if ("2".equals(list.get(b))){
+                list.remove(b);
+                continue;
+            }
+            b++;
+        }
+        list.forEach(System.out::println);
     }
 }
