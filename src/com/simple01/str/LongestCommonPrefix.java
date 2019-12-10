@@ -1,4 +1,4 @@
-package com.simple01;
+package com.simple01.str;
 
 /**
  * @author Song Yinghui
