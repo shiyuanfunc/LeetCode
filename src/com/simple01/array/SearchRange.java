@@ -32,7 +32,7 @@ public class SearchRange {
                 if (mid > 0){
                     int max = mid;
                     int min = max;
-                    while ((max + 1 < nums.length - 1) && nums[max + 1] == target){
+                    while ((max + 1 <= nums.length - 1) && nums[max + 1] == target){
                         max ++;
                     }
                     while (min - 1 >= 0 && nums[min - 1] == target){
@@ -43,7 +43,7 @@ public class SearchRange {
                     return result;
                 }
                 result[0] = 0;
-                while ((mid+1< nums.length -1) && nums[mid + 1] == target){
+                while ((mid+1<= nums.length -1) && nums[mid + 1] == target){
                     mid++;
                 }
                 result[1] = mid;
@@ -60,7 +60,8 @@ public class SearchRange {
 
     public static void main(String[] args) {
         int[] nums = new int[]{1,2,4,5,7,8,8,9,9,9,10,11};
-        int[] ints = new SearchRange().searchRange(nums, 9);
+        int[] nums2 = new int[]{2,2};
+        int[] ints = new SearchRange().searchRange(nums2, 2);
         Arrays.stream(ints).forEach(System.out::println);
     }
 }
