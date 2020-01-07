@@ -1,4 +1,4 @@
-package com;
+package com.common;
 
 /**
  * @author Song Yinghui

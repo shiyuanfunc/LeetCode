@@ -1,6 +1,6 @@
 package com.simple01.tree;
 
-import com.TreeNode;
+import com.common.TreeNode;
 
 /**
  * @author Song Yinghui

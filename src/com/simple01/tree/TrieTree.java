@@ -1,4 +1,4 @@
-package com.simple01.array;
+package com.simple01.tree;
 
 /**
  * @author Song Yinghui
