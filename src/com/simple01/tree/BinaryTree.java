@@ -17,7 +17,7 @@ public class BinaryTree {
      * @param right
      * @return
      */
-    public TreeNode buildTree(int[] nums, int left , int right){
+    public static TreeNode buildTree(int[] nums, int left , int right){
         if (left > right){
             return null;
         }
